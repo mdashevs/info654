@@ -1,0 +1,141 @@
+.jacquard-24-regular {
+  font-family: "Jacquard 24", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+body {
+                background-image: url(https://64.media.tumblr.com/f155f19361188b06d514884a5cbf9f59/tumblr_pmd6e6Ol7y1runoqyo10_r1_540.gif);
+                background-size: cover;
+                background-position: center center;
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+                height: 100vh;
+                margin: 0;
+            }
+
+h1 {
+    color:#a52a2a;
+    font-family: "Jacquard 24";
+    font-size: 150px;
+    text-align: center;
+    margin-top: 2%;
+     }
+
+.cross {
+
+    width: 80px;
+    height: 116.75px;
+    transform: rotate(180deg);
+}
+
+
+h2 {
+    color:rgb(227, 158, 68);
+    margin-left: 120px;
+    margin-right: 120px;
+    border-style: ridge;
+    border-color: rgb(124, 77, 167);
+    border-width: 5px;   
+}
+
+.movie{
+    background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.etsystatic.com%2F5286882%2Fr%2Fil%2Fc145a8%2F1590850267%2Fil_fullxfull.1590850267_4fle.jpg&f=1&nofb=1&ipt=a83e4a9ce0b892e3a74d905d06dca1875911e705e668dccddd9028a7c572881f);
+    color:#faebd7;
+    background-size: 50%;
+    margin-left: 520px;
+    margin-right: 310px;
+    border-style:groove;
+    border-width: 7px;
+    border-color:rgb(124, 77, 167);
+    text-align: center;
+
+}
+
+.bat{
+   position:fixed;
+    width: 400px;
+    height: 400px;
+    padding-bottom: 0%;
+    
+
+}
+
+.music {
+    color:rgb(244, 199, 141);
+    background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpixnio.com%2Ffree-images%2F2017%2F03%2F17%2F2017-03-17-09-16-41.jpg&f=1&nofb=1&ipt=9ce0fb6a645b3ff5f0d25f81a7f8a4a407ff9e025206dc878a332b90acd55e46);
+   background-size: 100%;
+    margin-left: 520px;
+    margin-right: 310px;
+    border-style:groove;
+    border-width: 7px;
+    border-color:rgb(124, 77, 167);
+    text-align: center;
+}
+
+.events{
+ color:#a52a2a;
+    background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.vectorstock.com%2Fi%2F1000v%2F19%2F48%2Fdark-floral-velvet-background-vector-6151948.jpg&f=1&nofb=1&ipt=22d308463d3470ce56017694131262280327c691ee6eb926a7a825f72894a3eb);
+    background-size: 100%;
+    margin-left: 120px;
+    margin-right: 120px;
+    border-style:groove;
+    border-width: 7px;
+    border-color:rgb(124, 77, 167);
+    text-align: center;
+    font-family: "Jacquard 24";
+    padding-bottom: 1%;
+    padding-top: 1%;
+    font-size: 60px;
+}
+
+.things{
+    color:rgb(227, 158, 68);
+    margin-left: 520px;
+    margin-right: 310px;
+    border-style: ridge;
+    border-color: rgb(124, 77, 167);
+    border-width: 5px; 
+    text-align: center;
+}
+
+.description{
+color:rgb(244, 199, 141);
+ background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpixnio.com%2Ffree-images%2F2017%2F03%2F17%2F2017-03-17-09-16-41.jpg&f=1&nofb=1&ipt=9ce0fb6a645b3ff5f0d25f81a7f8a4a407ff9e025206dc878a332b90acd55e46);
+   background-size: 100%;
+    margin-left: 520px;
+    margin-right: 310px;
+    border-style:groove;
+    border-width: 7px;
+    border-color:rgb(124, 77, 167);
+    text-align: center;
+
+}
+
+h6{ color: beige;
+    text-align: center;
+
+
+}
+
+.photos{
+    color:rgb(234, 175, 99);
+    font-size: .5em;
+    margin-left: 520px;
+    margin-right: 310px;
+     border-style:groove;
+    border-width: 7px;
+    border-color:rgb(124, 77, 167);
+    position: static;
+
+}
+
+.about-footer{
+    background-color:rgb(83, 51, 112);
+    color:rgb(234, 175, 99);
+    text-align: center;
+}
+
+    

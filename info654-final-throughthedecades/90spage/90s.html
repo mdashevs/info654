@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>90s page</title>
+<link rel="stylesheet" href="90s.css">
+<link rel="stylesheet" href="snake.css">
+</head>
+<body>
+
+<div class="header">
+    <h1 class="logo">TheNineties.com</h1>
+    <h2 class="tagline">Welcome to the 90s!</h2>
+</div>
+
+<div class="container">
+
+   
+    <div class="left-column">
+        <div class="feature-box">
+            <h3>The Top 10 Movies</h3>
+            <p><a href="https://www.imdb.com/list/ls026063255/" target="_blank">The Highest Grossing Films of the decade</a></p>
+            <ol>
+                <li>Titanic (1997)</li>
+                <li>Star Wars: Episode I The Phantom Menace (1999)</li>
+                <li>Jurrasic Park (1993)</li>
+                <li>Independence Day (1996)</li>
+                <li>The Lion King (1994)</li>
+                <li>Forrest Gump (1994)</li>
+                <li>The Sixth Sense (1999)</li>
+                <li>The Lost World: Jurassic Park (1997)</li>
+                <li>Men in Black (1997)</li>
+                <li>Armageddon (1998)</li>
+            </ol>
+        </div>
+    </div>
+
+
+    <div class="center-column">
+        <div class="feature-box">
+            <h3>Top Music Hits of the Decade</h3>
+            <p>What were people listening to?</p>
+            <iframe
+                style="border-radius:12px"
+                src="https://open.spotify.com/embed/playlist/37i9dQZF1DXbTxeAdrVG2l?utm_source=generator&theme=0"
+                width="100%" height="152" frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy">
+            </iframe>
+        </div>
+
+        <div id="snake-box">
+            <canvas id="snake-canvas" width="200" height="200"></canvas>
+            <div id="snake-score">Score: <span id="score">0</span></div>
+        </div>
+    </div>
+
+ 
+    <div class="right-column">
+        <div class="newswire">
+            <h3>
+            <a href="https://lithub.com/a-century-of-reading-the-10-books-that-defined-the-1990s/" target="_blank">
+                10 Books that Defined the Decade</a></h3>
+            <ol>
+                <li>Tim O’Brien, The Things They Carried (1990)</li>
+                <li>Tony Kushner, Angels in America (1991)</li>
+                <li>Denis Johnson, Jesus’ Son (1992)</li>
+                <li>Donna Tartt, The Secret History (1992)</li>
+                <li>Jeffrey Eugenides, The Virgin Suicides (1993)</li>
+                <li>David Foster Wallace, Infinite Jest (1996)</li>
+                <li>Helen Fielding, Bridget Jones’ Diary (1996)</li>
+                <li>Chuck Palahniuk, Fight Club (1996)</li>
+                <li>Frank McCourt, Angela’s Ashes (1996)</li>
+                <li>Jhumpa Lahiri, The Interpreter of Maladies (1999)</li>
+            </ol>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="culturalevent">
+<h3>
+  <a href="https://www.cnn.com/2017/07/05/world/gallery/90-moments-from-the-90s" target="_blank">
+    Significant Moments of the Decade
+  </a>
+</h3>
+
+    <ul class="events-list">
+
+        <li class="event-item">
+            <img src="Pictures/Kurt.jpg" alt="Nirvana band photo">
+            <p>
+                <strong>Kurt Cobain's suicide (1994)</strong><br>
+                Nirvana front man wrote some of the '90s' most memorable songs and propelled
+                "grunge" to become the dominant musical genre of the decade. The singer battled
+                depression and heroin addiction for years before his suicide. He was 27.
+            </p>
+        </li>
+
+        <li class="event-item">
+            <img src="Pictures/O.J._Simpson_1994.jpg" alt="OJ Simpson">
+            <p>
+                <strong>OJ trial (1995)</strong><br>
+                “If it doesn't fit, you must acquit” — In one of the most memorable moments of a
+                blockbuster murder trial, on June 15, 1995, O.J. Simpson struggled to fit his
+                hand into a glove prosecutors claimed he wore the night his ex-wife Nicole Brown
+                Simpson and Ronald Goldman were killed. The request to have Simpson try on gloves
+                in court became a pivotal moment in a trial that ended in acquittal.
+            </p>
+        </li>
+
+        <li class="event-item">
+            <img src="Pictures/Los_Angeles_Riots.jpg" alt="LA Riots">
+            <p>
+                <strong>Rodney King Riots (1992)</strong><br>
+                The acquittal of four LAPD officers involved in King’s beating led to days of unrest.
+            </p>
+        </li>
+
+        <li class="event-item">
+            <img src="Pictures/Diana_Princess.jpg" alt="Princess Diana">
+            <p>
+                <strong>Princess Diana dies (1997)</strong><br>
+                A tragic car crash in Paris shocked the world and led to global mourning of the
+                beloved Princess of Wales.
+            </p>
+        </li>
+
+        <li class="event-item">
+            <img src="Pictures/Tonya_Harding.jpg" alt="Tonya Harding skating">
+            <p>
+                <strong>Tonya Harding (1994)</strong><br>
+                Before the 1994 Lillehammer Winter Olympics, figure skater Nancy Kerrigan was injured
+                by a man connected to fellow US figure skater Tonya Harding, sparking one of sports’
+                biggest scandals. Kerrigan won silver; Harding placed eighth and was later banned for life.
+            </p>
+        </li>
+
+        <li class="event-item">
+            <img src="Pictures/John_Bobbitt.jpg" alt="John Bobbitt">
+            <p>
+                <strong>Lorena Bobbitt (1994)</strong><br>
+                The case that captivated tabloids and sparked conversations about domestic abuse.
+            </p>
+        </li>
+
+        <li class="event-item">
+            <img src="Pictures/Dissecting_Elmo_Live.jpg" alt="Elmo dissection">
+            <p>
+                <strong>Tickle Me Elmo Craze (1996)</strong><br>
+                Going to the mall between Thanksgiving and Christmas was dangerous — never more so than
+                during the Elmo craze. The toy retailed for ~$30 but re-sold for thousands, causing fights
+                and even injuries in stores.
+            </p>
+        </li>
+
+        <li class="event-item">
+            <img src="Pictures/Tk_arrest.jpg" alt="Ted Kaczynski arrest">
+            <p>
+                <strong>Unabomber Caught (1996)</strong><br>
+                Ted Kaczynski was arrested after nearly 20 years of deadly bombings that killed three
+                and injured 24. A tip from his brother led to the capture after a 35,000-word manifesto
+                was published in major newspapers.
+            </p>
+        </li>
+
+        <li class="event-item">
+            <img src="Pictures/Teacher_and_student.jpg" alt="Teacher with student">
+            <p>
+                <strong>May December (1996)</strong><br>
+                Mary Kay Letourneau, a married 34-year-old teacher, began an illegal relationship with
+                a 13-year-old student, Vili Fualaau. She later gave birth to his child before serving
+                seven years in prison.
+            </p>
+        </li>
+
+        <li class="event-item">
+            <img src="Pictures/Ramsey_grave.jpg" alt="JonBenet Ramsey's grave">
+            <p>
+                <strong>JonBenét Ramsey (1996)</strong><br>
+                How was a 6-year-old beauty pageant star slain in her own home? The case remains unsolved.
+                Early suspicion fell on her parents, but DNA later cleared them.
+            </p>
+        </li>
+
+        <li class="event-item">
+            <img src="Pictures/Columbine.jpg" alt="Columbine shooting security footage">
+            <p>
+                <strong>Columbine Shooting (1999)</strong><br>
+                A school shooting in Colorado killed 13 people and changed American views on school safety forever.
+            </p>
+        </li>
+
+    </ul>
+</div>
+
+<script>
+
+const canvas = document.getElementById("snake-canvas");
+const ctx = canvas.getContext("2d");
+const scoreEl = document.getElementById("score");
+
+const tileSize = 10;
+const tiles = canvas.width / tileSize;
+
+let snake = [{ x: 5, y: 5 }];
+let dx = 1;
+let dy = 0;
+let food = randomFood();
+let score = 0;
+
+setInterval(gameLoop, 100);
+
+function gameLoop() {
+    update();
+    draw();
+}
+
+function update() {
+    const head = { x: snake[0].x + dx, y: snake[0].y + dy };
+
+    if (head.x < 0 || head.x >= tiles || head.y < 0 || head.y >= tiles) return reset();
+    for (let segment of snake) {
+        if (segment.x === head.x && segment.y === head.y) return reset();
+    }
+
+    snake.unshift(head);
+
+    if (head.x === food.x && head.y === food.y) {
+        score++;
+        scoreEl.textContent = score;
+        food = randomFood();
+    } else {
+        snake.pop();
+    }
+}
+
+function draw() {
+    ctx.fillStyle = "#000";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.fillStyle = "#0f0";
+    snake.forEach(part => {
+        ctx.fillRect(part.x * tileSize, part.y * tileSize, tileSize, tileSize);
+    });
+
+    ctx.fillStyle = "#f00";
+    ctx.fillRect(food.x * tileSize, food.y * tileSize, tileSize, tileSize);
+}
+
+function randomFood() {
+    return {
+        x: Math.floor(Math.random() * tiles),
+        y: Math.floor(Math.random() * tiles)
+    };
+}
+
+function reset() {
+    snake = [{ x: 5, y: 5 }];
+    dx = 1;
+    dy = 0;
+    score = 0;
+    scoreEl.textContent = 0;
+    food = randomFood();
+}
+
+document.addEventListener("keydown", e => {
+    if (e.key === "ArrowUp" && dy !== 1)      { dx = 0; dy = -1; }
+    else if (e.key === "ArrowDown" && dy !== -1) { dx = 0; dy = 1; }
+    else if (e.key === "ArrowLeft" && dx !== 1)  { dx = -1; dy = 0; }
+    else if (e.key === "ArrowRight" && dx !== -1){ dx = 1; dy = 0; }
+});
+</script>
+<footer class="about-footer">
+  <p>About Me: I'm a MLIS student at the Pratt Institute studying to be a high school librarian. I love the 90s! </p>
+  <a href="../index.html">
+  <img src="Pictures/discoball2.png" alt="Back to Home" class="back-image">
+</a>
+  <p>&copy; 2025 Natalie Orozco. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

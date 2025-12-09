@@ -1,0 +1,54 @@
+html {background-color: #36465D;}
+h1 {text-align: center;
+    font-family: Helvetica neue, sans-serif;
+    color: white;}
+.about {position: absolute;
+    right: 0;
+    background-color: white;
+    width: 200px;
+    height: 320px;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 20px;
+    text-align: left;
+    }
+.container {width: 700px;
+    height: 350px;
+    background-color: white;
+    border-radius: 20px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: left;
+    flex-grow: inherit;}
+.container1 {width: 700px;
+    height: 300px;
+    background-color: white;
+    border-radius: 20px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: left;
+    flex-grow: inherit;}
+.container2 {width: 700px;
+    height: 1900px;
+    background-color: white;
+    border-radius: 20px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: left;
+    flex-grow: inherit;}
+h3, p {font-family: Helvetica neue, sans-serif;
+        font-weight: 300;}
+h2 {font-family: Helvetica neue, sans-serif;}
+ul {font-family: Helvetica neue, sans-serif;}
+form * {border: none;
+    background-color: white;
+        font-family: helvetica neue, sans-serif;
+        font-size: big;}
+footer {text-align: center;
+    font-family: Helvetica neue, sans-serif;
+    color: white;
+}
+a {color: gray;
+    font-family: Helvetica neue, sans-serif;}
+button {font-family: Helvetica neue, sans-serif;
+        }
