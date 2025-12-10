@@ -1,137 +1,91 @@
-// Y2K Draggable Windows - Make all windows draggable by their header
-document.addEventListener('DOMContentLoaded', function() {
-  const windows = document.querySelectorAll('.window');
-  const desktopIcons = document.querySelectorAll('.desktop-icon');
-  // Start above the desktop icons z-index (which is 1000 in CSS) so opened windows can be raised above icons
-  let zIndex = 1001;
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Core setups
+  const windows = Array.from(document.querySelectorAll('.window'));
+  const desktopIcons = Array.from(document.querySelectorAll('.desktop-icon'));
+
+  // zIndex counter to keep newly focused/opened windows on top
+  let zIndexCounter = 1;
+
+  // Drag state
   let draggedWindow = null;
   let dragOffset = { x: 0, y: 0 };
 
-    // Handle desktop folder clicks to open/show windows
-  desktopIcons.forEach(icon => {
-    icon.addEventListener('click', (e) => {
-      e.preventDefault();
-      const windowId = icon.getAttribute('data-window');
-      console.log('desktop icon clicked:', windowId);
-      const targetWindow = document.getElementById(windowId);
-      
-      if (!targetWindow) {
-        console.warn('No target window found for id:', windowId);
+  // Delegated click handler for desktop icons (open/focus windows)
+  document.addEventListener('click', function (e) {
+    const icon = e.target.closest('.desktop-icon');
+    if (!icon) return;
+
+    const targetId = icon.dataset.window || icon.getAttribute('data-window');
+    if (!targetId) return;
+
+    const targetWindow = document.getElementById(targetId);
+    if (!targetWindow) return;
+
+    // Use computed style to check real display value (may be none in CSS)
+    const computed = getComputedStyle(targetWindow).display;
+    if (computed === 'none') {
+      targetWindow.style.display = 'block';
+    }
+
+    // Bring to front
+    zIndexCounter += 1;
+    targetWindow.style.zIndex = zIndexCounter;
+  });
+
+  // Make each window draggable by its header
+  windows.forEach(function (win) {
+    const header = win.querySelector('.window-header');
+    if (!header) return;
+
+    header.addEventListener('mousedown', function (evt) {
+      // Start dragging this window
+      draggedWindow = win;
+
+      // Ensure the window is positioned so left/top changes move it
+      const cs = getComputedStyle(win).position;
+      if (cs !== 'absolute' && cs !== 'fixed') {
+        win.style.position = 'absolute';
       }
 
-      if (targetWindow) {
-        // Toggle or show window
-          const computed = getComputedStyle(targetWindow).display;
-          if (computed === 'none') {
-          targetWindow.style.display = 'block';
-          targetWindow.style.zIndex = ++zIndex;
-          
-          // Randomize position slightly when opening
-          const randomX = Math.random() * (window.innerWidth - 300) + 50;
-          const randomY = Math.random() * (window.innerHeight - 200) + 50;
-          targetWindow.style.left = randomX + 'px';
-          targetWindow.style.top = randomY + 'px';
-        } else {
-          targetWindow.style.zIndex = ++zIndex;
-        }
-      }
+      // Bring to front when starting drag
+      zIndexCounter += 1;
+      win.style.zIndex = zIndexCounter;
+
+      const rect = win.getBoundingClientRect();
+      dragOffset.x = evt.clientX - rect.left;
+      dragOffset.y = evt.clientY - rect.top;
+
+      // Prevent text selection while dragging
+      evt.preventDefault();
+    });
+
+    // Clicking anywhere in a window should also bring it to front
+    win.addEventListener('mousedown', function () {
+      zIndexCounter += 1;
+      win.style.zIndex = zIndexCounter;
     });
   });
 
-  windows.forEach(windowEl => {
-    const header = windowEl.querySelector('.window-header');
+  // Global mouse move: update window position in real-time
+  document.addEventListener('mousemove', function (e) {
+    if (!draggedWindow) return;
 
-    // Make header draggable
-    header.addEventListener('mousedown', (e) => {
-      draggedWindow = windowEl;
-      windowEl.classList.add('dragging');
-      windowEl.style.zIndex = ++zIndex;
+    const newLeft = e.clientX - dragOffset.x;
+    const newTop = e.clientY - dragOffset.y;
 
-      const rect = windowEl.getBoundingClientRect();
-      dragOffset.x = e.clientX - rect.left;
-      dragOffset.y = e.clientY - rect.top;
-    });
+    // Keep the window inside the viewport (simple clamping)
+    const maxLeft = window.innerWidth - draggedWindow.offsetWidth;
+    const maxTop = window.innerHeight - draggedWindow.offsetHeight;
 
-    // Close button
-    const closeBtn = windowEl.querySelector('.btn-close');
-    if (closeBtn) {
-      closeBtn.addEventListener('click', () => {
-        windowEl.style.display = 'none';
-      });
-    }
-
-    // Minimize button
-    const minimizeBtn = windowEl.querySelector('.btn-minimize');
-    if (minimizeBtn) {
-      minimizeBtn.addEventListener('click', () => {
-        const body = windowEl.querySelector('.window-body');
-        if (body.style.display === 'none') {
-          body.style.display = 'block';
-        } else {
-          body.style.display = 'none';
-        }
-      });
-    }
-
-    // Maximize button (restore to random position)
-    const maximizeBtn = windowEl.querySelector('.btn-maximize');
-    if (maximizeBtn) {
-      maximizeBtn.addEventListener('click', () => {
-        const body = windowEl.querySelector('.window-body');
-        if (body.style.display === 'none') {
-          body.style.display = 'block';
-        }
-        // Randomize position slightly
-        windowEl.style.left = (Math.random() * 100 + 50) + 'px';
-        windowEl.style.top = (Math.random() * 100 + 50) + 'px';
-      });
-    }
+    draggedWindow.style.left = Math.max(0, Math.min(newLeft, maxLeft)) + 'px';
+    draggedWindow.style.top = Math.max(0, Math.min(newTop, maxTop)) + 'px';
   });
 
-  // Global mouse move/up for dragging
-  document.addEventListener('mousemove', (e) => {
+  // On mouse up: stop dragging
+  document.addEventListener('mouseup', function () {
     if (draggedWindow) {
-      const newX = e.clientX - dragOffset.x;
-      const newY = e.clientY - dragOffset.y;
-
-      draggedWindow.style.left = Math.max(0, Math.min(newX, window.innerWidth - 100)) + 'px';
-      draggedWindow.style.top = Math.max(0, Math.min(newY, window.innerHeight - 20)) + 'px';
-    }
-  });
-
-  document.addEventListener('mouseup', () => {
-    if (draggedWindow) {
-      draggedWindow.classList.remove('dragging');
       draggedWindow = null;
     }
   });
-
-  // Randomly scatter windows on page load for dreamy effect
-  windows.forEach((windowEl, index) => {
-    // Show first window by default
-    if (index === 0) {
-      windowEl.style.display = 'block';
-    }
-    
-    const randomX = Math.random() * (window.innerWidth - 300) + 50;
-    const randomY = Math.random() * (window.innerHeight - 200) + 50;
-    
-    // Use a slight offset from the inline styles for visual variety
-    windowEl.style.left = (randomX + (Math.random() * 40 - 20)) + 'px';
-    windowEl.style.top = (randomY + (Math.random() * 40 - 20)) + 'px';
-  });
-
-  
-  
-
-  function updateTime() {
-    if (isPlaying) {
-      currentTime += 1;
-      const minutes = Math.floor(currentTime / 60);
-      const seconds = currentTime % 60;
-      timeDisplay.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
-    }
-  }
-
-  
 });
