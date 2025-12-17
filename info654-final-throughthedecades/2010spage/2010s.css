@@ -13,7 +13,7 @@ flex-direction: column;
 text-align: center;
 background-color: white }
 
-.holistic-heading{
+#holistic-heading{
 font-family: bitcount; 
 font-size: 2rem; 
 padding-bottom: 0%; 
