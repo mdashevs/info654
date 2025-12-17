@@ -92,7 +92,7 @@ align-items: center;
 gap:30px;}
 
 .80simage{
-min-width: 100%; 
+display: flex;
 height: auto;
 justify-content: center;}
 
