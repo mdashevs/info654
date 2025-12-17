@@ -85,7 +85,7 @@ h1 {
     transform: rotate(180deg);
 }
 
-#80s-container {
+#80scontainer {
 display: flex;
 flex-direction: column;
 align-items: center;}
