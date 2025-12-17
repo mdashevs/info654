@@ -2,6 +2,23 @@ html {background-color: #36465D;}
 h1 {text-align: center;
     font-family: Helvetica neue, sans-serif;
     color: white;}
+
+@font-face {
+  font-family: bitcount; 
+  src: url(.../michellefonts/BitcountPropSingle-Regular.ttf);}
+
+.web-header{
+display:flex;
+flex-direction: column;
+text-align: center;
+background-color: white }
+
+.holistic-heading{
+font-family: bitcount; 
+font-size: 2rem; 
+padding-bottom: 0%; 
+margin-bottom: 0.25%;}
+
 .topbar{
     margin: 0;
     padding-bottom: 20px;
