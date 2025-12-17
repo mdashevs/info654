@@ -1,6 +1,6 @@
 html {background-color: #36465D;}
 h1 {text-align: center;
-    font-family: Helvetica neue, sans-serif;
+    font-family: 'Helvetica neue', 'sans-serif';
     color: white;}
 
 @font-face {
@@ -49,7 +49,7 @@ margin-bottom: 0.25%;}
     src: url(../michellefonts/HelveticaNeueRoman.otf);
   }
 
-  .backhome{color: black; font-family: Arial, Helvetica, sans-serif; text-decoration: none; font-weight: boldest;}
+  .backhome{color: black; font-family: Arial, Helvetica, sans-serif; text-decoration: none; font-weight: bold;}
   .headerone {color: #a52a2a; font-family:jacquard; text-decoration: none ; font-size: 25px;}
   .headertwo {color: yellow; text-shadow: 3px 3px hotpink; font-family: Arial, Helvetica, sans-serif;  text-decoration: none ; font-weight: bold;}
   .headerthree {color:#0d088e; font-family: mymicrosoftsans; text-decoration: none ;}
@@ -96,7 +96,7 @@ ul {font-family: Helvetica neue, sans-serif;}
 form * {border: none;
     background-color: white;
         font-family: helvetica neue, sans-serif;
-        font-size: big;}
+        font-size: large;}
 footer {text-align: center;
     font-family: Helvetica neue, sans-serif;
     color: white;
