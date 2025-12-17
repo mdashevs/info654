@@ -13,6 +13,7 @@ h1 {color: black; font-family: bitcount;}
     justify-content: center;
     gap: 40px;
     font-size: 20px;
+    background-color: green;
   }
 
   .topbar a.active {
