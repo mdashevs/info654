@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: bitcount; 
-  src: url(../michellefonts/BitcountPropSingle-Regular.ttf);}
+  src: url(../../michellefonts/BitcountPropSingle-Regular.ttf);}
 
 .web-header{
 display:flex;
