@@ -48,6 +48,10 @@ h1 {color: black; font-family: bitcount;}
     flex-direction: column;
     align-items: center;
   }
+
+  .intro{font-family: bitcount;
+        padding-left: 10%;
+        padding-right: 10%;}
   
   button {
     color: #04AA6D;
