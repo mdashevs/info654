@@ -58,13 +58,6 @@ color: black;}
   .headerthree {color:#0d088e; font-family: mymicrosoftsans; text-decoration: none ;}
   .headerfour {color:#36465D; font-family: myhelveticaneue; text-decoration: none ; font-style: italic;}
 
-#home {
-  text-align: center;
-  font-size: 5.5rem;
-  padding-bottom: 0.2%;
-  margin-bottom: 1%;
-}
-
 .header {
   text-align: center;
   padding: 20px;
