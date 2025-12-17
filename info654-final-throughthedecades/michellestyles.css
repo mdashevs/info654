@@ -8,14 +8,14 @@ h1 {color: black; font-family: bitcount;}
 
 .topbar{
     margin: 0;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
     display: flex;
     justify-content: center;
     gap: 40px;
-    font-size: 20px;
+    font-size: 1%;
     background-color: green;
-    max-width: 100%;
+    min-width: 100%;
   }
 
   .topbar a.active {
