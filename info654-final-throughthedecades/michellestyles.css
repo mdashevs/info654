@@ -13,7 +13,7 @@ h1 {color: black; font-family: bitcount;}
     display: flex;
     justify-content: center;
     gap: 40px;
-    font-size: 1%;
+    font-size: 20px;
     background-color: green;
     min-width: 100%;
   }
