@@ -85,13 +85,13 @@ h1 {
     transform: rotate(180deg);
 }
 
-#80scontainer {
+#eightiescontainer {
 display: flex;
 flex-direction: column;
 align-items: center;
 gap:30px;}
 
-.80simage{
+.eightiesimage{
 display: flex;
 height: auto;
 justify-content: center;
