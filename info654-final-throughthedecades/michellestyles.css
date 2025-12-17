@@ -49,10 +49,11 @@ h1 {color: black; font-family: bitcount;}
     align-items: center;
   }
 
-  .intro {color: black;
-        font-family: bitcount;
-        padding-left: 10%;
-        padding-right: 10%;}
+  p {
+    color: black;
+      font-family: bitcount;
+      padding-left: 10%;
+      adding-right: 10%;}
   
   button {
     color: #04AA6D;
