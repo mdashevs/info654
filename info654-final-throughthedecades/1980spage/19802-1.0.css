@@ -186,6 +186,14 @@ h6{ color: beige;
 
 }
 
+iframe {
+  border-radius: 12px;
+	width: 100%; 
+  height: 352px; 
+	border: none;
+}
+
+
 .about-footer{
     background-color:rgb(83, 51, 112);
     color:rgb(234, 175, 99);
