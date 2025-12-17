@@ -83,6 +83,8 @@ color: black;}
   align-items: flex-start;
 }
 
+#musicbox{color:yellow;}
+
 .left-column,
 .center-column,
 .right-column {
