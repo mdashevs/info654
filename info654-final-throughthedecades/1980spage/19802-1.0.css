@@ -111,6 +111,7 @@ h2 {
     border-width: 7px;
     border-color:rgb(124, 77, 167);
     text-align: center;
+	margin-bottom: 1%;
 
 }
 
@@ -133,6 +134,7 @@ h2 {
     border-width: 7px;
     border-color:rgb(124, 77, 167);
     text-align: center;
+	margin-bottom: 1%;
 }
 
 .events{
@@ -185,7 +187,7 @@ h6{ color: beige;
     font-size: .5em;
     margin-left: 520px;
     margin-right: 310px;
-     border-style:groove;
+    border-style:groove;
     border-width: 7px;
     border-color:rgb(124, 77, 167);
     position: static;
