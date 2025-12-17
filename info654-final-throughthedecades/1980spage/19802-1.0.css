@@ -14,7 +14,9 @@ font-family: bitcount;
 font-size: 2rem; 
 padding-bottom: 0%; 
 margin-bottom: 0.25%;
-color: black;}
+color: black;
+border-style: none;
+}
 
 .topbar{
     margin: 0;
