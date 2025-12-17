@@ -15,7 +15,7 @@ h1 {color: black; font-family: bitcount;}
     gap: 40px;
     font-size: 20px;
     background-color: green;
-    min-width: 100%;
+    width: 100%;
   }
 
   .topbar a.active {
