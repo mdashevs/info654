@@ -94,7 +94,8 @@ gap:30px;}
 .80simage{
 display: flex;
 height: auto;
-justify-content: center;}
+justify-content: center;
+align-items: center;}
 
 h2 {
     color:rgb(227, 158, 68);
