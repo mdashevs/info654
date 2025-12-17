@@ -7,28 +7,56 @@ body {
 
 @font-face {
   font-family: bitcount; 
-  src: url(michellefonts/BitcountPropSingle-Regular.ttf); 
-}
+  src: url(../michellefonts/BitcountPropSingle-Regular.ttf);}
 
-@font-face {
-  font-family: jacquard;
-  src: url(michellefonts/Jacquard24-Regular.ttf);
-}
+.web-header{
+display:flex;
+flex-direction: column;
+text-align: center;
+background-color: white;
+margin-bottom: 2%;}
 
-@font-face {
-  font-family: mymicrosoftsans;
-  src: url(michellefonts/micross.ttf);
-}
+.holistic-heading{
+font-family: bitcount; 
+font-size: 2rem; 
+padding-bottom: 0%; 
+margin-bottom: 0.25%;
+color: black;}
 
-@font-face {
-  font-family: myhelveticaneue;
-  src: url(michellefonts/HelveticaNeueRoman.otf);
-}
+.topbar{
+    margin: 0;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    font-size: 20px;
+  }
 
-h1 {
-  color: black;
-  font-family: bitcount;
-}
+  .topbar a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+
+  @font-face {
+    font-family: jacquard;
+    src: url(../michellefonts/Jacquard24-Regular.ttf);
+  }
+
+  @font-face {
+    font-family: mymicrosoftsans;
+    src: url(../michellefonts/micross.ttf);
+  }
+
+  @font-face {
+    font-family: myhelveticaneue;
+    src: url(../michellefonts/HelveticaNeueRoman.otf);
+  }
+
+  .backhome{color: black; font-family: Arial, Helvetica, sans-serif; text-decoration: none; font-weight: bold;}
+  .headerone {color: #a52a2a; font-family:jacquard; text-decoration: none ; font-size: 25px;}
+  .headertwo {color: yellow; text-shadow: 3px 3px hotpink; font-family: Arial, Helvetica, sans-serif;  text-decoration: none ; font-weight: bold;}
+  .headerthree {color:#0d088e; font-family: mymicrosoftsans; text-decoration: none ;}
+  .headerfour {color:#36465D; font-family: myhelveticaneue; text-decoration: none ; font-style: italic;}
 
 #home {
   text-align: center;
@@ -36,50 +64,6 @@ h1 {
   padding-bottom: 0.2%;
   margin-bottom: 1%;
 }
-
-.topbar {
-  margin: 0;
-  padding-top: 1%;
-  padding-bottom: 1%;
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  font-size: 20px;
-  width: 100%;
-}
-
-.topbar a.active {
-  background-color: #04AA6D;
-  color: white;
-}
-.headerone {
-  color: #a52a2a;
-  font-family: jacquard;
-  font-size: 25px;
-  text-decoration: none;
-}
-
-.headertwo {
-  color: yellow;
-  text-shadow: 3px 3px hotpink;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.headerthree {
-  color: #0d088e;
-  font-family: mymicrosoftsans;
-  text-decoration: none;
-}
-
-.headerfour {
-  color: #36465D;
-  font-family: myhelveticaneue;
-  font-style: italic;
-  text-decoration: none;
-}
-
 
 .header {
   text-align: center;
