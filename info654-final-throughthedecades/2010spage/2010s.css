@@ -5,7 +5,7 @@ h1 {text-align: center;
 
 @font-face {
   font-family: bitcount; 
-  src: url(.../michellefonts/BitcountPropSingle-Regular.ttf);}
+  src: url(../michellefonts/BitcountPropSingle-Regular.ttf);}
 
 .web-header{
 display:flex;
@@ -36,17 +36,17 @@ margin-bottom: 0.25%;}
 
   @font-face {
     font-family: jacquard;
-    src: url(.../michellefonts/Jacquard24-Regular.ttf);
+    src: url(../michellefonts/Jacquard24-Regular.ttf);
   }
 
   @font-face {
     font-family: mymicrosoftsans;
-    src: url(.../michellefonts/micross.ttf);
+    src: url(../michellefonts/micross.ttf);
   }
 
   @font-face {
     font-family: myhelveticaneue;
-    src: url(.../michellefonts/HelveticaNeueRoman.otf);
+    src: url(../michellefonts/HelveticaNeueRoman.otf);
   }
 
   #headerone {color: #a52a2a; font-family:jacquard; text-decoration: none ; font-size: 25px;}
