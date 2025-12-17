@@ -102,29 +102,6 @@ border: none;
 }
 
 
-#snake-box {
-    margin: 10px auto;
-    background: #111;
-    padding: 8px;
-    border: 2px solid #fff;
-    width: 200px;
-    user-select: none;
-    font-family: monospace;
-    text-align: center;
-}
-
-#snake-canvas {
-    display: block;
-    background: #000;
-}
-
-#snake-score {
-    margin-top: 5px;
-    color: #0f0;
-    font-size: 14px;
-}
-
-
 .culturalevent {
     background: hotpink;
     border: 3px solid yellow;
