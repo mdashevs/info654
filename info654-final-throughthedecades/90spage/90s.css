@@ -5,6 +5,82 @@ body {
   margin: 0;
 }
 
+@font-face {
+  font-family: bitcount; 
+  src: url(michellefonts/BitcountPropSingle-Regular.ttf); 
+}
+
+@font-face {
+  font-family: jacquard;
+  src: url(michellefonts/Jacquard24-Regular.ttf);
+}
+
+@font-face {
+  font-family: mymicrosoftsans;
+  src: url(michellefonts/micross.ttf);
+}
+
+@font-face {
+  font-family: myhelveticaneue;
+  src: url(michellefonts/HelveticaNeueRoman.otf);
+}
+
+h1 {
+  color: black;
+  font-family: bitcount;
+}
+
+#home {
+  text-align: center;
+  font-size: 5.5rem;
+  padding-bottom: 0.2%;
+  margin-bottom: 1%;
+}
+
+.topbar {
+  margin: 0;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  font-size: 20px;
+  width: 100%;
+}
+
+.topbar a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+.headerone {
+  color: #a52a2a;
+  font-family: jacquard;
+  font-size: 25px;
+  text-decoration: none;
+}
+
+.headertwo {
+  color: yellow;
+  text-shadow: 3px 3px hotpink;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.headerthree {
+  color: #0d088e;
+  font-family: mymicrosoftsans;
+  text-decoration: none;
+}
+
+.headerfour {
+  color: #36465D;
+  font-family: myhelveticaneue;
+  font-style: italic;
+  text-decoration: none;
+}
+
+
 .header {
   text-align: center;
   padding: 20px;
