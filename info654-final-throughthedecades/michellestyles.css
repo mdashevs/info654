@@ -8,7 +8,8 @@ h1 {color: black; font-family: bitcount;}
 
 .topbar{
     margin: 0;
-    padding-bottom: 20px;
+    padding-top: 5%;
+    padding-bottom: 5%;
     display: flex;
     justify-content: center;
     gap: 40px;
